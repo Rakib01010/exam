@@ -10,7 +10,7 @@ class Hall:
             row = [0 for a in range(cols)]
             self.__seats.append(row)
     # way 2
-    # self.__seats = [["free" for _ in range(cols)] for _ in range(rows)] 
+    # self.__seats = [[0 for _ in range(cols)] for _ in range(rows)] 
 
     def _entry_show(self, id, movie_name, time):
         self.__show_list.append({"id": id, "movie_name": movie_name, "time": time})
