@@ -126,7 +126,7 @@ def main():
             print(f"Account details: {user.__dict__}")
 
         elif choice == "2":
-            auth= input("User of admin(Input will be User or Admin): ")
+            auth= input("User of admin(Input will be User or Admin and you can use any of your account as a admin accout): ")
             if auth == "User" or "user":
                 name = input("Name: ")
                 password = input("Password: ")
