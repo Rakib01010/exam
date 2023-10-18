@@ -28,10 +28,21 @@ class Main:
         print(f"Total QTY {Main.total_Qty} and Total amount {Main.total_ammount}")
 
     def all_data(self):
-        for item in self.invoice.values():
-            print(item)
-        print()
+        if self.invoice!= {}:
+            for item in self.invoice.values():
+                print(item)
+            print()
+        else:
+            print("Empty")
 
+    def find_by_index(self):
+        index = int(input("Give an SL_NO: "))
+        if index== True:
+            for item in self.invoice.values():
+                if index == item["SL_NO"]:
+                    print(item)
+        else:
+            print("Give right data")
 
     # @staticmethod
     # def number_to_words(number=None):
@@ -76,8 +87,10 @@ def main_menu():
     print("0. All data")
     print("1. Add Invoice Item")
     print("2. View Total Calculation")
-    print("3. View Total Calculation in word")
-    print("4. Exit")
+    print("3. Not Aviable")
+    print("4. Not Aviable")
+    print("5. View fixed SL_NO data")
+    print("6. Exit")
     choice = input("Enter your choice: ")
     return choice
 
@@ -108,6 +121,9 @@ if __name__ == "__main__":
         elif choice == "4":
             print("Exiting the program. Goodbye!")
             break
-
+        elif choice == "5":
+            main_instance.find_by_index()
+        elif choice == "6":
+            break
         else:
             print("Invalid choice. Please try again.")
