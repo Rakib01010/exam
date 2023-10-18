@@ -118,9 +118,9 @@ if __name__ == "__main__":
         # elif choice == "3":
         #     words = main_instance.number_to_words()
         #    print(words)  # Print the words here
-        elif choice == "4":
-            print("Exiting the program. Goodbye!")
-            break
+        # elif choice == "4":
+        #     print("Exiting the program. Goodbye!")
+        #     break
         elif choice == "5":
             main_instance.find_by_index()
         elif choice == "6":
