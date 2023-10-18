@@ -44,51 +44,21 @@ class Main:
         else:
             print("Give right data")
 
-    # @staticmethod
-    # def number_to_words(number=None):
-    #     if number is None:
-    #         number = Main.total_ammount
-    #
-    #     units = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
-    #     teens = ["", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"]
-    #     tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"]
-    #
-    #     if number == 0:
-    #         return "Zero"
-    #
-    #     words = ""
-    #     crore = ["", "Hundred", "Thousand", "Lakh", "Crore"]
-    #
-    #     i = 0
-    #     while number > 0:
-    #         part = number % 1000
-    #         if part > 0:
-    #             if i > 0:
-    #                 words = units[part // 100] + " " + crore[i] + " " + words
-    #             else:
-    #                 words = units[part // 100] + " " + crore[i] + words
-    #
-    #             if part % 100 != 0:
-    #                 if part % 100 < 10:
-    #                     words = words + " and " + units[part % 100]
-    #                 elif part % 100 < 20:
-    #                     words = words + " and " + teens[part % 100 - 10]
-    #                 else:
-    #                     words = words + " and " + tens[(part % 100) // 10] + " " + units[part % 10]
-    #
-    #         number //= 1000
-    #         i += 1
-    #
-    #     return words.strip()
-    #
-
+    def find_by_index_account(self):
+        index = int(input("Give an SL_NO: "))
+        if index== True:
+            for item in self.invoice.values():
+                if index == item["SL_NO"]:
+                    print(index,"ammout is ",item["ammount"])
+        else:
+            print("Give right data")
 
 def main_menu():
     print("0. All data")
     print("1. Add Invoice Item")
     print("2. View Total Calculation")
     print("3. Not Aviable")
-    print("4. Not Aviable")
+    print("4. View fixed SL_NO account balance")
     print("5. View fixed SL_NO data")
     print("6. Exit")
     choice = input("Enter your choice: ")
@@ -118,9 +88,8 @@ if __name__ == "__main__":
         # elif choice == "3":
         #     words = main_instance.number_to_words()
         #    print(words)  # Print the words here
-        # elif choice == "4":
-        #     print("Exiting the program. Goodbye!")
-        #     break
+        elif choice == "4":
+            main_instance.find_by_index_account()
         elif choice == "5":
             main_instance.find_by_index()
         elif choice == "6":
