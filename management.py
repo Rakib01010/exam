@@ -1,6 +1,6 @@
 class Main:
     total_Qty = 0
-    total_ammount = 2056
+    total_ammount = 0
     SL_NO = 0
 
     def __init__(self):
